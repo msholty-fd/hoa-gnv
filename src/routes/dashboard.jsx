@@ -3,7 +3,7 @@ import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
-import ComplaintForm from 'views/ComplaintForm/ComplaintForm.jsx';
+import ComplaintForm from "views/ComplaintForm/ComplaintForm.jsx";
 import NotificationsPage from "views/Notifications/Notifications.jsx";
 
 import {
@@ -13,7 +13,7 @@ import {
   LibraryBooks,
   BubbleChart,
   People,
-  PermContactCalendar,
+  PermContactCalendar
 } from "@material-ui/icons";
 
 const dashboardRoutes = [
@@ -40,8 +40,8 @@ const dashboardRoutes = [
   },
   {
     path: "/typography",
-    sidebarName: "Bi-Law Management",
-    navbarName: "Bi-Law Management",
+    sidebarName: "Resource Center",
+    navbarName: "Resource Center",
     icon: LibraryBooks,
     component: Typography
   },
@@ -57,14 +57,14 @@ const dashboardRoutes = [
     sidebarName: "File a Complaint",
     navbarName: "File a Complaint",
     icon: Gavel,
-    component: ComplaintForm,
+    component: ComplaintForm
   },
   {
     path: "/calendar",
     sidebarName: "Event Calendar",
     navbarName: "Event Calendar",
     icon: PermContactCalendar,
-    component: NotificationsPage,
+    component: NotificationsPage
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];

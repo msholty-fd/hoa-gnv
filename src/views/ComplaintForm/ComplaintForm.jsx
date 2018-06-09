@@ -1,12 +1,7 @@
 import React from "react";
 import { Grid } from "material-ui";
 
-import {
-  RegularCard,
-  Button,
-  CustomInput,
-  ItemGrid
-} from "components";
+import { RegularCard, Button, CustomInput, ItemGrid } from "components";
 
 function UserProfile({ ...props }) {
   return (
@@ -24,7 +19,7 @@ function UserProfile({ ...props }) {
                       labelText="Address"
                       id="address"
                       inputProps={{
-                        value: '1200 NE 4th St'
+                        value: "1200 NE 4th St"
                       }}
                       formControlProps={{
                         fullWidth: true
@@ -34,7 +29,7 @@ function UserProfile({ ...props }) {
                 </Grid>
               </div>
             }
-            footer={<Button color="primary">Update Profile</Button>}
+            footer={<Button color="primary">Submit</Button>}
           />
         </ItemGrid>
       </Grid>
