@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import cx from "classnames";
+import { LocalParking } from "@material-ui/icons";
 import {
   withStyles,
   Drawer,
@@ -21,7 +22,7 @@ const Sidebar = ({ ...props }) => {
   function activeRoute(routeName) {
     return props.location.pathname.indexOf(routeName) > -1 ? true : false;
   }
-  const { classes, color, logo, image, logoText, routes } = props;
+  const { classes, color, image, logoText, routes } = props;
   var links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
@@ -55,13 +56,11 @@ const Sidebar = ({ ...props }) => {
     </List>
   );
   var brand = (
-    <div className={classes.logo}>
-      <a href="https://www.creative-tim.com" className={classes.logoLink}>
-        <div className={classes.logoImage}>
-          <img src={logo} alt="logo" className={classes.img} />
-        </div>
-        {logoText}
-      </a>
+    <div className={`${classes.logo} ${classes.logoLink}`} style={{margin: 5}}>
+      <div className={classes.logoImage}>
+        <LocalParking />
+      </div>
+      <span style={{ fontSize: 12 }}>{logoText}</span>
     </div>
   );
   return (

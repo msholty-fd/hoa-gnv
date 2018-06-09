@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, InputLabel } from "material-ui";
+import { Grid } from "material-ui";
 
 import {
   ProfileCard,
@@ -8,6 +8,7 @@ import {
   CustomInput,
   ItemGrid
 } from "components";
+import Maps from "views/Maps/Maps.jsx";
 
 import avatar from "assets/img/faces/marc.jpg";
 
@@ -24,18 +25,22 @@ function UserProfile({ ...props }) {
                 <Grid container>
                   <ItemGrid xs={12} sm={12} md={5}>
                     <CustomInput
-                      labelText="Company (disabled)"
+                      labelText="Title"
                       id="company-disabled"
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
-                        disabled: true
+                        disabled: true,
+                        value: 'President'
                       }}
                     />
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={3}>
                     <CustomInput
+                      inputProps={{
+                        value: 'jruffer'
+                      }}
                       labelText="Username"
                       id="username"
                       formControlProps={{
@@ -46,6 +51,9 @@ function UserProfile({ ...props }) {
                   <ItemGrid xs={12} sm={12} md={4}>
                     <CustomInput
                       labelText="Email address"
+                      inputProps={{
+                        value: 'jruffer@gmail.com'
+                      }}
                       id="email-address"
                       formControlProps={{
                         fullWidth: true
@@ -58,6 +66,9 @@ function UserProfile({ ...props }) {
                     <CustomInput
                       labelText="First Name"
                       id="first-name"
+                      inputProps={{
+                        value: 'James'
+                      }}
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -67,6 +78,23 @@ function UserProfile({ ...props }) {
                     <CustomInput
                       labelText="Last Name"
                       id="last-name"
+                      inputProps={{
+                        value: 'Ruffer'
+                      }}
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                    />
+                  </ItemGrid>
+                </Grid>
+                <Grid container>
+                  <ItemGrid xs={12} sm={12} md={12}>
+                    <CustomInput
+                      labelText="Address"
+                      id="address"
+                      inputProps={{
+                        value: '1200 NE 4th St'
+                      }}
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -78,6 +106,9 @@ function UserProfile({ ...props }) {
                     <CustomInput
                       labelText="City"
                       id="city"
+                      inputProps={{
+                        value: 'Gainesville'
+                      }}
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -87,6 +118,9 @@ function UserProfile({ ...props }) {
                     <CustomInput
                       labelText="Country"
                       id="country"
+                      inputProps={{
+                        value: 'USA'
+                      }}
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -96,6 +130,9 @@ function UserProfile({ ...props }) {
                     <CustomInput
                       labelText="Postal Code"
                       id="postal-code"
+                      inputProps={{
+                        value: '32601'
+                      }}
                       formControlProps={{
                         fullWidth: true
                       }}
@@ -104,18 +141,16 @@ function UserProfile({ ...props }) {
                 </Grid>
                 <Grid container>
                   <ItemGrid xs={12} sm={12} md={12}>
-                    <InputLabel style={{ color: "#AAAAAA" }}>
-                      About me
-                    </InputLabel>
                     <CustomInput
-                      labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
+                      labelText="About me"
                       id="about-me"
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
                         multiline: true,
-                        rows: 5
+                        rows: 1,
+                        value: 'I am an avid fishing enthusiast. My favorite food is pizza.'
                       }}
                     />
                   </ItemGrid>
@@ -128,15 +163,16 @@ function UserProfile({ ...props }) {
         <ItemGrid xs={12} sm={12} md={4}>
           <ProfileCard
             avatar={avatar}
-            subtitle="CEO / CO-FOUNDER"
-            title="Alec Thompson"
-            description="Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is..."
+            subtitle="President"
+            title="James Ruffer"
+            description="I am an avid fishing enthusiast. My favorite food is pizza."
             footer={
               <Button color="primary" round>
                 Follow
               </Button>
             }
           />
+          <Maps />
         </ItemGrid>
       </Grid>
     </div>

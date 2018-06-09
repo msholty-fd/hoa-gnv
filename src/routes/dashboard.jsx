@@ -3,24 +3,24 @@ import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
-import Maps from "views/Maps/Maps.jsx";
+import ComplaintForm from 'views/ComplaintForm/ComplaintForm.jsx';
 import NotificationsPage from "views/Notifications/Notifications.jsx";
 
 import {
   Dashboard,
   Person,
-  ContentPaste,
+  Gavel,
   LibraryBooks,
   BubbleChart,
-  LocationOn,
-  Notifications
+  People,
+  PermContactCalendar,
 } from "@material-ui/icons";
 
 const dashboardRoutes = [
   {
     path: "/dashboard",
     sidebarName: "Dashboard",
-    navbarName: "Material Dashboard",
+    navbarName: "Dashboard",
     icon: Dashboard,
     component: DashboardPage
   },
@@ -33,38 +33,38 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    sidebarName: "Table List",
-    navbarName: "Table List",
-    icon: ContentPaste,
+    sidebarName: "Community Members",
+    navbarName: "Community Members",
+    icon: People,
     component: TableList
   },
   {
     path: "/typography",
-    sidebarName: "Typography",
-    navbarName: "Typography",
+    sidebarName: "Bi-Law Management",
+    navbarName: "Bi-Law Management",
     icon: LibraryBooks,
     component: Typography
   },
   {
     path: "/icons",
-    sidebarName: "Icons",
-    navbarName: "Icons",
+    sidebarName: "Submit a Request",
+    navbarName: "Submit a Request",
     icon: BubbleChart,
     component: Icons
   },
   {
-    path: "/maps",
-    sidebarName: "Maps",
-    navbarName: "Map",
-    icon: LocationOn,
-    component: Maps
+    path: "/complaint",
+    sidebarName: "File a Complaint",
+    navbarName: "File a Complaint",
+    icon: Gavel,
+    component: ComplaintForm,
   },
   {
-    path: "/notifications",
-    sidebarName: "Notifications",
-    navbarName: "Notifications",
-    icon: Notifications,
-    component: NotificationsPage
+    path: "/calendar",
+    sidebarName: "Event Calendar",
+    navbarName: "Event Calendar",
+    icon: PermContactCalendar,
+    component: NotificationsPage,
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];

@@ -2,19 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
+import avatar from "assets/img/faces/marc.jpg";
+import beth from 'assets/img/faces/beth.jpg';
+import suzanne from 'assets/img/faces/suzanne.jpg';
 import {
-  ContentCopy,
-  Store,
   InfoOutline,
-  Warning,
-  DateRange,
   LocalOffer,
   Update,
-  ArrowUpward,
+  AttachMoney,
   AccessTime,
-  Accessibility
+  Accessibility,
+  Receipt,
+  Warning,
 } from "@material-ui/icons";
-import { withStyles, Grid } from "material-ui";
+import { withStyles, Grid, Button } from "material-ui";
 
 import {
   StatsCard,
@@ -22,13 +23,13 @@ import {
   TasksCard,
   RegularCard,
   Table,
-  ItemGrid
+  ItemGrid,
+  ProfileCard,
 } from "components";
 
 import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
+  poll1data,
+  poll2data,
 } from "variables/charts";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
@@ -50,24 +51,23 @@ class Dashboard extends React.Component {
         <Grid container>
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
-              icon={ContentCopy}
+              icon={Receipt}
               iconColor="orange"
-              title="Used Space"
-              description="49/50"
-              small="GB"
+              title="Your Dues"
+              description="$300"
               statIcon={Warning}
               statIconColor="danger"
-              statLink={{ text: "Get More Space...", href: "#pablo" }}
+              statLink={{ text: "Due June 15th", href: "/dues" }}
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
-              icon={Store}
+              icon={AttachMoney}
               iconColor="green"
-              title="Revenue"
+              title="HOA's Available Funds"
               description="$34,245"
-              statIcon={DateRange}
-              statText="Last 24 Hours"
+              statIcon={Update}
+              statText="Last updated today"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
@@ -84,98 +84,111 @@ class Dashboard extends React.Component {
             <StatsCard
               icon={Accessibility}
               iconColor="blue"
-              title="Followers"
-              description="+245"
+              title="Community Members"
+              description="107"
               statIcon={Update}
               statText="Just Updated"
             />
           </ItemGrid>
         </Grid>
+        <h3>Board Members</h3>
         <Grid container>
           <ItemGrid xs={12} sm={12} md={4}>
-            <ChartCard
-              chart={
-                <ChartistGraph
-                  className="ct-chart"
-                  data={dailySalesChart.data}
-                  type="Line"
-                  options={dailySalesChart.options}
-                  listener={dailySalesChart.animation}
-                />
+            <ProfileCard
+              avatar={avatar}
+              subtitle="President"
+              title="James Ruffer"
+              footer={
+                <Button color="primary" round>
+                  Profile
+                </Button>
               }
-              chartColor="green"
-              title="Daily Sales"
-              text={
-                <span>
-                  <span className={this.props.classes.successText}>
-                    <ArrowUpward
-                      className={this.props.classes.upArrowCardCategory}
-                    />{" "}
-                    55%
-                  </span>{" "}
-                  increase in today sales.
-                </span>
-              }
-              statIcon={AccessTime}
-              statText="updated 4 minutes ago"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={4}>
+            <ProfileCard
+              avatar={beth}
+              subtitle="Treasurer"
+              title="Beth Herrington"
+              footer={
+                <Button color="primary" round>
+                  Profile
+                </Button>
+              }
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={12} md={4}>
+            <ProfileCard
+              avatar={suzanne}
+              subtitle="Secretary"
+              title="Suzanne Bachus"
+              footer={
+                <Button color="primary" round>
+                  Profile
+                </Button>
+              }
+            />
+          </ItemGrid>
+        </Grid>
+        <h3>Active Polls</h3>
+        <Grid container>
+          <ItemGrid xs={12} sm={12} md={6}>
             <ChartCard
               chart={
                 <ChartistGraph
                   className="ct-chart"
-                  data={emailsSubscriptionChart.data}
+                  data={poll1data.data}
                   type="Bar"
-                  options={emailsSubscriptionChart.options}
-                  responsiveOptions={emailsSubscriptionChart.responsiveOptions}
-                  listener={emailsSubscriptionChart.animation}
+                  options={poll1data.options}
+                  responsiveOptions={poll1data.responsiveOptions}
+                  listener={poll1data.animation}
                 />
               }
               chartColor="orange"
-              title="Email Subscriptions"
+              title="Sign Refurbish Project"
               text="Last Campaign Performance"
               statIcon={AccessTime}
-              statText="campaign sent 2 days ago"
+              statText="ends by September 30th"
             />
           </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
+          <ItemGrid xs={12} sm={12} md={6}>
             <ChartCard
               chart={
                 <ChartistGraph
                   className="ct-chart"
-                  data={completedTasksChart.data}
-                  type="Line"
-                  options={completedTasksChart.options}
-                  listener={completedTasksChart.animation}
+                  data={poll2data.data}
+                  type="Bar"
+                  options={poll2data.options}
+                  responsiveOptions={poll2data.responsiveOptions}
+                  listener={poll2data.animation}
                 />
               }
               chartColor="red"
-              title="Completed Tasks"
-              text="Last Campaign Performance"
+              title="Election - Secretary"
+              // text="Last Campaign Performance"
               statIcon={AccessTime}
-              statText="campaign sent 2 days ago"
+              statText="ends on July 31st"
             />
           </ItemGrid>
         </Grid>
         <Grid container>
-          <ItemGrid xs={12} sm={12} md={6}>
+        <ItemGrid xs={12} sm={12} md={6}>
             <TasksCard />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
               headerColor="orange"
-              cardTitle="Employees Stats"
-              cardSubtitle="New employees on 15th September, 2016"
+              cardTitle="Finances"
+              cardSubtitle="Current Ledger"
               content={
                 <Table
                   tableHeaderColor="warning"
-                  tableHead={["ID", "Name", "Salary", "Country"]}
+                  tableHead={["Date", "Name", "Description", "Amount", "Total"]}
                   tableData={[
-                    ["1", "Dakota Rice", "$36,738", "Niger"],
-                    ["2", "Minerva Hooper", "$23,789", "Curaçao"],
-                    ["3", "Sage Rodriguez", "$56,142", "Netherlands"],
-                    ["4", "Philip Chaney", "$38,735", "Korea, South"]
+                    ["Jan 3, 2018", "Lawnmaster's", "Lawn Service Jan-Mar", "$1500.00", "$45,000" ],
+                    ["Mar 9, 2018", "Office Depot", "Office Supplies", "$100", "$44,900" ],
+                    ["April 3, 2018", "Lawnmaster's ", "Lawn Service Apr-Jun", "$1500.00", "$43,400"],
+                    ["May 18, 2018", "Sunshine Plumbing", "Sprinklers", "$350.00", "$43,050"],
                   ]}
                 />
               }
