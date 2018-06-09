@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 import avatar from "assets/img/faces/marc.jpg";
-import beth from 'assets/img/faces/beth.jpg';
-import suzanne from 'assets/img/faces/suzanne.jpg';
+import beth from "assets/img/faces/beth.jpg";
+import suzanne from "assets/img/faces/suzanne.jpg";
 import {
   InfoOutline,
   LocalOffer,
@@ -13,7 +13,7 @@ import {
   AccessTime,
   Accessibility,
   Receipt,
-  Warning,
+  Warning
 } from "@material-ui/icons";
 import { withStyles, Grid, Button } from "material-ui";
 
@@ -24,13 +24,10 @@ import {
   RegularCard,
   Table,
   ItemGrid,
-  ProfileCard,
+  ProfileCard
 } from "components";
 
-import {
-  poll1data,
-  poll2data,
-} from "variables/charts";
+import { poll1data, poll2data } from "variables/charts";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/dashboardStyle";
 
@@ -48,7 +45,7 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <Grid container>
+        <Grid container style={{ marginBottom: 50 }}>
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
               icon={Receipt}
@@ -91,7 +88,7 @@ class Dashboard extends React.Component {
             />
           </ItemGrid>
         </Grid>
-        <h3>Board Members</h3>
+        <h3 style={{ marginBottom: 20 }}>Board Members</h3>
         <Grid container>
           <ItemGrid xs={12} sm={12} md={4}>
             <ProfileCard
@@ -172,7 +169,7 @@ class Dashboard extends React.Component {
           </ItemGrid>
         </Grid>
         <Grid container>
-        <ItemGrid xs={12} sm={12} md={6}>
+          <ItemGrid xs={12} sm={12} md={6}>
             <TasksCard />
           </ItemGrid>
           <ItemGrid xs={12} sm={12} md={6}>
@@ -185,10 +182,34 @@ class Dashboard extends React.Component {
                   tableHeaderColor="warning"
                   tableHead={["Date", "Name", "Description", "Amount", "Total"]}
                   tableData={[
-                    ["Jan 3, 2018", "Lawnmaster's", "Lawn Service Jan-Mar", "$1500.00", "$45,000" ],
-                    ["Mar 9, 2018", "Office Depot", "Office Supplies", "$100", "$44,900" ],
-                    ["April 3, 2018", "Lawnmaster's ", "Lawn Service Apr-Jun", "$1500.00", "$43,400"],
-                    ["May 18, 2018", "Sunshine Plumbing", "Sprinklers", "$350.00", "$43,050"],
+                    [
+                      "Jan 3, 2018",
+                      "Lawnmaster's",
+                      "Lawn Service Jan-Mar",
+                      "$1500.00",
+                      "$45,000"
+                    ],
+                    [
+                      "Mar 9, 2018",
+                      "Office Depot",
+                      "Office Supplies",
+                      "$100",
+                      "$44,900"
+                    ],
+                    [
+                      "April 3, 2018",
+                      "Lawnmaster's ",
+                      "Lawn Service Apr-Jun",
+                      "$1500.00",
+                      "$43,400"
+                    ],
+                    [
+                      "May 18, 2018",
+                      "Sunshine Plumbing",
+                      "Sprinklers",
+                      "$350.00",
+                      "$43,050"
+                    ]
                   ]}
                 />
               }

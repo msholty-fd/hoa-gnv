@@ -23,15 +23,22 @@ function StatsCard({ ...props }) {
     iconColor
   } = props;
   return (
-    <Card className={classes.card}>
+    <Card
+      className={classes.card}
+      style={{ display: "flex", flexDirection: "column", height: "100%" }}
+    >
       <CardHeader
         classes={{
           root: classes.cardHeader + " " + classes[iconColor + "CardHeader"],
           avatar: classes.cardAvatar
         }}
+        style={{ width: "25%", position: "absolute" }}
         avatar={<props.icon className={classes.cardIcon} />}
       />
-      <CardContent className={classes.cardContent}>
+      <CardContent
+        className={classes.cardContent}
+        style={{ flex: 1, width: "50%", padding: 0, marginLeft: "47%" }}
+      >
         <Typography component="p" className={classes.cardCategory}>
           {title}
         </Typography>

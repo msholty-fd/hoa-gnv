@@ -13,7 +13,8 @@ import {
   LibraryBooks,
   BubbleChart,
   People,
-  PermContactCalendar
+  PermContactCalendar,
+  InsertChart
 } from "@material-ui/icons";
 
 const dashboardRoutes = [
@@ -64,6 +65,13 @@ const dashboardRoutes = [
     sidebarName: "Event Calendar",
     navbarName: "Event Calendar",
     icon: PermContactCalendar,
+    component: NotificationsPage
+  },
+  {
+    path: "/create-poll",
+    sidebarName: "Create a Poll",
+    navbarName: "Create a Poll",
+    icon: InsertChart,
     component: NotificationsPage
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
