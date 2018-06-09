@@ -17,7 +17,7 @@ import HeaderLinks from "./HeaderLinks";
 
 function Header({ ...props }) {
   function makeBrand() {
-    var name;
+    var name = "";
     props.routes.map((prop, key) => {
       if (prop.path === props.location.pathname) {
         name = prop.navbarName;
@@ -34,7 +34,6 @@ function Header({ ...props }) {
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
-          {/* Here we create navbar brand, based on route name */}
           <Button className={classes.title} style={{ fontSize: 20 }}>
             {makeBrand()}
           </Button>

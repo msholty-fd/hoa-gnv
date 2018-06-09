@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { Manager, Target, Popper } from "react-popper";
+import { Link } from "react-router-dom";
 import {
   withStyles,
   IconButton,
@@ -138,10 +139,12 @@ class HeaderLinks extends React.Component {
           aria-label="Person"
           className={classes.buttonLink}
         >
-          <Person className={classes.links} />
-          <Hidden mdUp>
-            <p className={classes.linkText}>Profile</p>
-          </Hidden>
+          <Link to="/user">
+            <Person className={classes.links} />
+            <Hidden mdUp>
+              <p className={classes.linkText}>Profile</p>
+            </Hidden>
+          </Link>
         </IconButton>
       </div>
     );

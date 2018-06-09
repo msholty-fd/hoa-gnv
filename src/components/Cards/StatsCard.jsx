@@ -25,7 +25,12 @@ function StatsCard({ ...props }) {
   return (
     <Card
       className={classes.card}
-      style={{ display: "flex", flexDirection: "column", height: "100%" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        marginRight: 15
+      }}
     >
       <CardHeader
         classes={{
@@ -37,7 +42,13 @@ function StatsCard({ ...props }) {
       />
       <CardContent
         className={classes.cardContent}
-        style={{ flex: 1, width: "50%", padding: 0, marginLeft: "47%" }}
+        style={{
+          flex: 1,
+          width: "50%",
+          padding: 0,
+          marginLeft: "47%",
+          marginTop: 15
+        }}
       >
         <Typography component="p" className={classes.cardCategory}>
           {title}

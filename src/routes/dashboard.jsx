@@ -1,10 +1,12 @@
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
-import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
 import ComplaintForm from "views/ComplaintForm/ComplaintForm.jsx";
 import NotificationsPage from "views/Notifications/Notifications.jsx";
+import ResourceCenter from "views/Resources/ResourceCenter.jsx";
+import ResourceDetails from "views/Resources/ResourceDetails.jsx";
+import CalendarPage from "views/CalendarPage/CalendarPage.jsx";
 
 import {
   Dashboard,
@@ -27,10 +29,10 @@ const dashboardRoutes = [
   },
   {
     path: "/user",
-    sidebarName: "User Profile",
     navbarName: "Profile",
     icon: Person,
-    component: UserProfile
+    component: UserProfile,
+    hide: true
   },
   {
     path: "/table",
@@ -40,11 +42,17 @@ const dashboardRoutes = [
     component: TableList
   },
   {
-    path: "/typography",
+    path: "/resources/:id",
+    navbarName: "Resource Center",
+    component: ResourceDetails,
+    hide: true
+  },
+  {
+    path: "/resources",
     sidebarName: "Resource Center",
     navbarName: "Resource Center",
     icon: LibraryBooks,
-    component: Typography
+    component: ResourceCenter
   },
   {
     path: "/icons",
@@ -65,7 +73,7 @@ const dashboardRoutes = [
     sidebarName: "Event Calendar",
     navbarName: "Event Calendar",
     icon: PermContactCalendar,
-    component: NotificationsPage
+    component: CalendarPage
   },
   {
     path: "/create-poll",

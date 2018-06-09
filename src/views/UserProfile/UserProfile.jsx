@@ -9,7 +9,6 @@ import {
   ItemGrid
 } from "components";
 import Maps from "views/Maps/Maps.jsx";
-
 import avatar from "assets/img/faces/marc.jpg";
 
 class UserProfile extends React.Component {

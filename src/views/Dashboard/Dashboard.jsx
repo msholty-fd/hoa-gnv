@@ -1,10 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// react plugin for creating charts
 import ChartistGraph from "react-chartist";
-import avatar from "assets/img/faces/marc.jpg";
-import beth from "assets/img/faces/beth.jpg";
-import suzanne from "assets/img/faces/suzanne.jpg";
 import {
   InfoOutline,
   LocalOffer,
@@ -15,7 +11,7 @@ import {
   Receipt,
   Warning
 } from "@material-ui/icons";
-import { withStyles, Grid, Button } from "material-ui";
+import { withStyles, Grid } from "material-ui";
 
 import {
   StatsCard,
@@ -23,8 +19,7 @@ import {
   TasksCard,
   RegularCard,
   Table,
-  ItemGrid,
-  ProfileCard
+  ItemGrid
 } from "components";
 
 import { poll1data, poll2data } from "variables/charts";
@@ -85,45 +80,6 @@ class Dashboard extends React.Component {
               description="107"
               statIcon={Update}
               statText="Just Updated"
-            />
-          </ItemGrid>
-        </Grid>
-        <h3 style={{ marginBottom: 20 }}>Board Members</h3>
-        <Grid container>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ProfileCard
-              avatar={avatar}
-              subtitle="President"
-              title="James Ruffer"
-              footer={
-                <Button color="primary" round>
-                  Profile
-                </Button>
-              }
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ProfileCard
-              avatar={beth}
-              subtitle="Treasurer"
-              title="Beth Herrington"
-              footer={
-                <Button color="primary" round>
-                  Profile
-                </Button>
-              }
-            />
-          </ItemGrid>
-          <ItemGrid xs={12} sm={12} md={4}>
-            <ProfileCard
-              avatar={suzanne}
-              subtitle="Secretary"
-              title="Suzanne Bachus"
-              footer={
-                <Button color="primary" round>
-                  Profile
-                </Button>
-              }
             />
           </ItemGrid>
         </Grid>
