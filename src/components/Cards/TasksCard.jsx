@@ -5,7 +5,7 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Typography,
+  Typography
 } from "material-ui";
 
 import { Tasks } from "components";

@@ -20,8 +20,8 @@ function StatsCard({ ...props }) {
     statLink,
     small,
     statText,
-    statIconColor,
-    iconColor
+    statIconColor
+    // iconColor
   } = props;
   return (
     <Card

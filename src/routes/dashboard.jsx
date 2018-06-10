@@ -1,7 +1,7 @@
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
-import Icons from "views/Icons/Icons.jsx";
+import SubmitRequest from "views/SubmitRequest/SubmitRequest.jsx";
 import ComplaintForm from "views/ComplaintForm/ComplaintForm.jsx";
 import CreatePoll from "views/CreatePoll/CreatePoll.jsx";
 import ResourceCenter from "views/Resources/ResourceCenter.jsx";
@@ -55,11 +55,11 @@ const dashboardRoutes = [
     component: ResourceCenter
   },
   {
-    path: "/icons",
+    path: "/request",
     sidebarName: "Submit a Request",
     navbarName: "Submit a Request",
     icon: BubbleChart,
-    component: Icons
+    component: SubmitRequest
   },
   {
     path: "/complaint",

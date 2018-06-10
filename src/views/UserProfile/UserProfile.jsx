@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from "react-hot-loader";
 import { Grid, InputLabel, MenuItem, Select } from "material-ui";
 import members from "variables/members";
 import {
@@ -197,12 +198,23 @@ class UserProfile extends React.Component {
               title="James Ruffer"
               description="I am an avid fishing enthusiast. My favorite food is pizza."
               footer={
-                <Button color="primary" round>
-                  Follow
-                </Button>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: "0 30%"
+                  }}
+                >
+                  <Button color="primary" round>
+                    Pay my dues
+                  </Button>
+                  <Button color="primary" round>
+                    See my past payments
+                  </Button>
+                </div>
               }
             />
-            <Maps />
+            {/* <Maps /> */}
           </ItemGrid>
         </Grid>
       </div>
@@ -214,4 +226,4 @@ class UserProfile extends React.Component {
   };
 }
 
-export default UserProfile;
+export default hot(module)(UserProfile);

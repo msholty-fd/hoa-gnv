@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import ChartistGraph from "react-chartist";
 import {
   InfoOutline,
-  LocalOffer,
   Update,
   AttachMoney,
   AccessTime,
   Accessibility,
   Receipt,
-  Warning
+  Warning,
+  DateRange
 } from "@material-ui/icons";
 import { withStyles, Grid } from "@material-ui/core";
 
@@ -66,10 +66,10 @@ class Dashboard extends React.Component {
             <StatsCard
               icon={InfoOutline}
               iconColor="red"
-              title="Fixed Issues"
-              description="75"
-              statIcon={LocalOffer}
-              statText="Tracked from Github"
+              title="Next Board Meeting"
+              description="June 23rd, 2018"
+              statIcon={DateRange}
+              statText="-"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
