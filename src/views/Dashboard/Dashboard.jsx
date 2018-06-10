@@ -11,7 +11,7 @@ import {
   Receipt,
   Warning
 } from "@material-ui/icons";
-import { withStyles, Grid } from "material-ui";
+import { withStyles, Grid } from "@material-ui/core";
 
 import {
   StatsCard,

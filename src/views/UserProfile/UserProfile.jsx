@@ -155,7 +155,7 @@ class UserProfile extends React.Component {
                         value={this.state.proxy}
                         onChange={this.handleChange}
                         inputProps={{
-                          name: "age",
+                          name: "proxy-voter",
                           id: "proxy-voter"
                         }}
                       >

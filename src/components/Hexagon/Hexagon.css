@@ -1,0 +1,27 @@
+.gradient {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(60deg, #ffa726, #fb8c00);
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.hexagon {
+  overflow: hidden;
+  position: absolute;
+  margin: 0 auto;
+  width: 86.6px;
+  height: 100px;
+  transform: rotate(-90deg) skewY(30deg);
+}
+.hexagon:before {
+  display: block; /* to be able to apply width/ height/ transform */
+  width: inherit;
+  height: inherit;
+  transform: skewY(-30deg) rotate(60deg) translate(50%);
+  background: linear-gradient(to bottom, #ffa726 0%, #fb8c00 100%);
+  background-size: cover;
+  content: "";
+}
+.hexagon:before {
+  transform: skewY(-30deg) rotate(60deg) translate(0);
+}

@@ -3,7 +3,7 @@ import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Icons from "views/Icons/Icons.jsx";
 import ComplaintForm from "views/ComplaintForm/ComplaintForm.jsx";
-import NotificationsPage from "views/Notifications/Notifications.jsx";
+import CreatePoll from "views/CreatePoll/CreatePoll.jsx";
 import ResourceCenter from "views/Resources/ResourceCenter.jsx";
 import ResourceDetails from "views/Resources/ResourceDetails.jsx";
 import CalendarPage from "views/CalendarPage/CalendarPage.jsx";
@@ -80,7 +80,7 @@ const dashboardRoutes = [
     sidebarName: "Create a Poll",
     navbarName: "Create a Poll",
     icon: InsertChart,
-    component: NotificationsPage
+    component: CreatePoll
   },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];

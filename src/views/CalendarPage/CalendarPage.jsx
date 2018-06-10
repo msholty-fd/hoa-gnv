@@ -1,6 +1,8 @@
 import React from "react";
 import Calendar from "react-big-calendar";
+import { hot } from "react-hot-loader";
 import moment from "moment";
+import { Button } from "@material-ui/core";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 Calendar.setLocalizer(Calendar.momentLocalizer(moment));
@@ -23,6 +25,17 @@ class CalendarPage extends React.Component {
   render() {
     return (
       <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            marginBottom: 10
+          }}
+        >
+          <Button color="primary" variant="contained">
+            Create New Event
+          </Button>
+        </div>
         <Calendar
           defaultDate={new Date()}
           defaultView="month"
@@ -34,4 +47,4 @@ class CalendarPage extends React.Component {
   }
 }
 
-export default CalendarPage;
+export default hot(module)(CalendarPage);

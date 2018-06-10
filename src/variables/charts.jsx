@@ -75,7 +75,7 @@ const poll1data = {
       "Jeffcoat Signs",
       "Gainesville Neon & Signs",
       "Signs By Tomorrow",
-      "SignMasters",
+      "SignMasters"
     ],
     series: [[20, 4, 17, 66]]
   },
@@ -128,11 +128,7 @@ const poll1data = {
 
 const poll2data = {
   data: {
-    labels: [
-      "James Ruffer",
-      "Teri Southern",
-      "Marci Bunn",
-    ],
+    labels: ["James Ruffer", "Teri Southern", "Marci Bunn"],
     series: [[3, 18, 17]]
   },
   options: {
@@ -140,7 +136,7 @@ const poll2data = {
       showGrid: false
     },
     low: 0,
-    high: 100, // max members in the hoa total
+    high: 50, // max members in the hoa total
     chartPadding: {
       top: 0,
       right: 5,
@@ -181,5 +177,5 @@ const poll2data = {
 module.exports = {
   dailySalesChart,
   poll1data,
-  poll2data,
+  poll2data
 };

@@ -7,8 +7,9 @@ import {
   CardActions,
   Typography
 } from "material-ui";
+import { hot } from "react-hot-loader";
 import PropTypes from "prop-types";
-
+import Hexagon from "../Hexagon/Hexagon.jsx";
 import statsCardStyle from "assets/jss/material-dashboard-react/statsCardStyle";
 
 function StatsCard({ ...props }) {
@@ -32,14 +33,8 @@ function StatsCard({ ...props }) {
         marginRight: 15
       }}
     >
-      <CardHeader
-        classes={{
-          root: classes.cardHeader + " " + classes[iconColor + "CardHeader"],
-          avatar: classes.cardAvatar
-        }}
-        style={{ width: "25%", position: "absolute" }}
-        avatar={<props.icon className={classes.cardIcon} />}
-      />
+      <Hexagon icon={<props.icon className={classes.cardIcon} />} />
+      <CardHeader classes={{}} />
       <CardContent
         className={classes.cardContent}
         style={{
@@ -112,4 +107,4 @@ StatsCard.propTypes = {
   statText: PropTypes.node
 };
 
-export default withStyles(statsCardStyle)(StatsCard);
+export default hot(module)(withStyles(statsCardStyle)(StatsCard));

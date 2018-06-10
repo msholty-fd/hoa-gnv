@@ -12,7 +12,7 @@ import {
   ClickAwayListener,
   Hidden
 } from "material-ui";
-import { Person, Notifications, Dashboard, Search } from "@material-ui/icons";
+import { Person, Notifications, Search } from "@material-ui/icons";
 
 import { CustomInput, IconButton as SearchButton } from "components";
 
@@ -52,16 +52,6 @@ class HeaderLinks extends React.Component {
         >
           <Search className={classes.searchIcon} />
         </SearchButton>
-        <IconButton
-          color="inherit"
-          aria-label="Dashboard"
-          className={classes.buttonLink}
-        >
-          <Dashboard className={classes.links} />
-          <Hidden mdUp>
-            <p className={classes.linkText}>Dashboard</p>
-          </Hidden>
-        </IconButton>
         <Manager style={{ display: "inline-block" }}>
           <Target>
             <IconButton
