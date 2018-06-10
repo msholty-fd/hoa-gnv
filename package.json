@@ -1,7 +1,7 @@
 {
-  "name": "material-dashboard-react",
+  "name": "hoa",
   "version": "1.2.0",
-  "description": "Material Dashboard React. Coded by Creative Tim",
+  "description": "HOA",
   "private": false,
   "main": "index.js",
   "dependencies": {
