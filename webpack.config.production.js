@@ -4,25 +4,21 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  devtool: "cheap-module-source-map",
+  mode: "production",
+  devtool: "source-map",
   entry: "./src/index.js",
-  devServer: {
-    historyApiFallback: true
-  },
   output: {
     pathinfo: true,
     filename: "static/js/bundle.js",
     chunkFilename: "static/js/[name].chunk.js",
-    publicPath: "/",
-    devtoolModuleFilenameTemplate: info =>
-      path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")
+    publicPath: "/"
   },
   resolve: {
     modules: ["./src", "./node_modules"],
     extensions: [".js", ".json", ".jsx", ".ts", ".tsx"]
   },
   module: {
+    strictExportPresence: true,
     rules: [
       {
         test: /\.(js|jsx|ts|tsx)$/,
@@ -79,8 +75,5 @@ module.exports = {
       template: "./src/index.html"
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-  ],
-  performance: {
-    hints: false
-  }
+  ]
 };
