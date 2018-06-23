@@ -8,6 +8,7 @@ import indexRoutes from "./routes/index.jsx";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 
 const hist = createBrowserHistory();
+
 const theme = createMuiTheme({
   overrides: {
     MuiCard: {
