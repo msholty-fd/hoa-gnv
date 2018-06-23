@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
-import { Select } from "material-ui";
+import { Select } from "@material-ui/core";
 import FormControl from "@material-ui/core/FormControl";
 import members from "variables/members";
 import { RegularCard, Button, ItemGrid } from "components";

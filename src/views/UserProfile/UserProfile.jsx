@@ -1,6 +1,6 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import { Grid, InputLabel, MenuItem, Select } from "material-ui";
+import { Grid, InputLabel, MenuItem, Select } from "@material-ui/core";
 import members from "variables/members";
 import {
   ProfileCard,
@@ -9,7 +9,6 @@ import {
   CustomInput,
   ItemGrid
 } from "components";
-import Maps from "views/Maps/Maps.jsx";
 import avatar from "assets/img/faces/marc.jpg";
 
 class UserProfile extends React.Component {

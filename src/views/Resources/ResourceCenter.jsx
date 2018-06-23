@@ -6,7 +6,7 @@ import {
   ListItemIcon,
   ListItemText,
   Divider
-} from "material-ui";
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
 import InboxIcon from "@material-ui/icons/Inbox";
 import DraftsIcon from "@material-ui/icons/Drafts";

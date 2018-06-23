@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardActions,
   Typography
-} from "material-ui";
+} from "@material-ui/core";
 import PropTypes from "prop-types";
 
 import chartCardStyle from "assets/jss/material-dashboard-react/chartCardStyle";
@@ -31,7 +31,11 @@ function ChartCard({ ...props }) {
         subheader={chart}
       />
       <CardContent className={classes.cardContent}>
-        <Typography variant="title" component="h4" className={classes.cardTitle}>
+        <Typography
+          variant="title"
+          component="h4"
+          className={classes.cardTitle}
+        >
           {title}
         </Typography>
         <Typography component="p" className={classes.cardCategory}>

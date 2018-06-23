@@ -1,10 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Switch, Route, Redirect } from "react-router-dom";
-// creates a beautiful scrollbar
-import PerfectScrollbar from "perfect-scrollbar";
-import "perfect-scrollbar/css/perfect-scrollbar.css";
-import { withStyles } from "material-ui";
+import { withStyles } from "@material-ui/core";
 
 import { Header, Footer, Sidebar } from "components";
 
@@ -34,12 +31,6 @@ class App extends React.Component {
   };
   getRoute() {
     return this.props.location.pathname !== "/maps";
-  }
-  componentDidMount() {
-    if(navigator.platform.indexOf('Win') > -1){
-      // eslint-disable-next-line
-      const ps = new PerfectScrollbar(this.refs.mainPanel);
-    }
   }
   componentDidUpdate() {
     this.refs.mainPanel.scrollTop = 0;

@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardActions,
   Typography
-} from "material-ui";
+} from "@material-ui/core";
 import { hot } from "react-hot-loader";
 import PropTypes from "prop-types";
 import Hexagon from "../Hexagon/Hexagon.jsx";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button } from "material-ui";
+import { Grid, Button } from "@material-ui/core";
 import avatar from "assets/img/faces/marc.jpg";
 import beth from "assets/img/faces/beth.jpg";
 import suzanne from "assets/img/faces/suzanne.jpg";
